@@ -1,3 +1,5 @@
+mermaid:true
+
 # 适用于智能花盆的时间序列算法[TimeSeries4SmartPot]
 
 ## 程序结构
@@ -38,10 +40,12 @@ ARMA是AR和MA的结合
 
 AR模型定义：
 ![1](http://latex.codecogs.com/svg.latex?X_t=\sum_{i=1}^p\alpha_iX_{t-i}+\varepsilon_t)
+
 该模型描述预测值与历史值的关系
 
 MA模型定义：
 ![2](http://latex.codecogs.com/svg.latex?Y_t=\sum_{i=1}^q\beta_i\varepsilon_{t-i}+\varepsilon_t)
+
 该模型描述白噪声
 
 两个模型结合，就需要确定每个模型的多项式阶数，记为P和Q。这里采用AIC函数来量化模型，取AIC值最小时对应的P和Q
