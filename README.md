@@ -28,7 +28,7 @@ G(判断预测值是否低于设定阈值?)-->H(Arduino控制程序)
 
 根据获取到的PQ，进行时间序列模型的拟合，并给定指定步长，使用该时间序列模型进行预测。
 
-**==！！！==**
+**！！！**
 
 注意，如果序列平稳性转换时进行了差分运算，要对此时预测出来的序列进行迭代恢复操作，否则得到的都是平稳序列的预测值，对观测没有指导意义
 
@@ -37,15 +37,11 @@ G(判断预测值是否低于设定阈值?)-->H(Arduino控制程序)
 ARMA是AR和MA的结合
 
 AR模型定义：
-$$
-X_t=\sum_{i=1}^p\alpha_iX_{t-i}+\varepsilon_t
-$$
+![1](http://latex.codecogs.com/svg.latex?X_t=\sum_{i=1}^p\alpha_iX_{t-i}+\varepsilon_t)
 该模型描述预测值与历史值的关系
 
 MA模型定义：
-$$
-Y_t=\sum_{i=1}^q\beta_i\varepsilon_{t-i}+\varepsilon_t
-$$
+![2](http://latex.codecogs.com/svg.latex?Y_t=\sum_{i=1}^q\beta_i\varepsilon_{t-i}+\varepsilon_t)
 该模型描述白噪声
 
 两个模型结合，就需要确定每个模型的多项式阶数，记为P和Q。这里采用AIC函数来量化模型，取AIC值最小时对应的P和Q
