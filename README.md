@@ -1,5 +1,3 @@
-mermaid:true
-
 # 适用于智能花盆的时间序列算法[TimeSeries4SmartPot]
 
 ## 程序结构
@@ -17,6 +15,7 @@ F(Recover)--新一轮循环-->A(GetData)
 F(Recover)-->G(判断预测值是否低于设定阈值?)
 G(判断预测值是否低于设定阈值?)-->H(Arduino控制程序)
 ```
+
 
 ## 流程简介
 
